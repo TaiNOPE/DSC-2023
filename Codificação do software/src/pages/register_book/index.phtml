@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<meta charset="UTF-8">
+
+<html lang="pt-br">
+    <header>
+        <title>Teste</title>
+        <link rel="stylesheet" href="../../css/header.css">
+        <link rel="stylesheet" href="css/register_book.css">
+        <script src="js/register_book.js"></script>
+    </header>
+
+    <body>
+        <header class="secondary">
+            <p>Cadastrar livro</p>
+        </header>
+
+        <main>
+            <form method="POST" action="../../database/register_book.php">
+                <label>Título</label>
+                <input type="text" placeholder="Título do livro" name="book_title">
+                <label>Autor</label>
+                <input type="text" placeholder="Autor do livro" name="book_author">
+                <label>Quantidade</label>
+                <input type="number" placeholder="" name="book_quantity">
+                <label>Visível?</label>
+                <input type="checkbox" placeholder="" name="book_visibility">
+                <input type="submit" value="Continuar">
+            </form>
+            <button id="submit">Enviar</button>
+        </main>
+    </body>
+</html>

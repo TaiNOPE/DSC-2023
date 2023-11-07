@@ -1,0 +1,72 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: NotoSans-Regular
+}
+
+
+header.main, header.secondary{
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Main header*/
+header.main{
+    background-color: #2B6687;
+}
+
+header button{
+    border: none;
+    margin: 0px 3px;
+    height: 50px;
+    width: 120px;
+    border-radius: 5px;
+    background-color: #4fbbf9;
+    color: white;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+header.main button.selected{
+    background-color: #002A42;
+    filter: drop-shadow(0px 10px #002A42);
+    border-radius: 5px 5px 0px 0px;
+}
+
+
+header.main .user-profile{
+    border: 1px solid red;
+}
+
+
+
+/* Secondary header*/
+header.secondary{
+    padding: 0px 10px;
+    background-color: #002A42;
+    color: white;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+
+header.secondary input{
+    margin: 5px; 
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+header.secondary input[name="query"]{
+    width: 500px;
+}
+
+
+@font-face{
+    font-family: NotoSans-Regular;
+    src: url("../assets/fonts/NotoSans-Regular.ttf");
+    
+}

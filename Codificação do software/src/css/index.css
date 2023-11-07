@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+header{
+    background-color: red;
+}
+
+/* Main header*/
+header.main{
+    background-color: #2B6687;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header button{
+    border: none;
+    margin: 0px 3px;
+}
+
+header.main button.selected{
+    background-color: orange;
+}
+
+
+header.main .user-profile{
+    
+}
+
+
+
+/* Secondary header*/
+header.secondary{
+    background-color: #002A42;
+    height: 60px
+}
