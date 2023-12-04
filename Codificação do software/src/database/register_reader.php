@@ -20,13 +20,21 @@
     //$password           = htmlspecialchars($password, ENT_QUOTES);
     //$confirm_password   = htmlspecialchars($confirm_password, ENT_QUOTES);
 
-    if($password != $confirm_password){
-        echo("passwd");
+    $isFormValid = true;
+    if($name == ""){ $isFormValid = false;}
+    if($cpf == ""){ $isFormValid = false;}
+    if($birth_date == ""){ $isFormValid = false;}
+    if($address == ""){ $isFormValid = false;}
+    if($phone == ""){ $isFormValid = false;}
+    if($email == ""){ $isFormValid = false;}
+    if($password == ""){ $isFormValid = false;}
+    if($confirm_password == ""){ $isFormValid = false;}
+    if($password != $confirm_password){ $isFormValid = false; }
+
+    if(!$isFormValid){
+        echo("formulario invalido");
         return;
     }
-
-
-    // [form validation goes here]
 
     connect();
 

@@ -26,8 +26,11 @@
     $isbn               = htmlspecialchars($isbn, ENT_QUOTES);
     //$quantity           = htmlspecialchars($quantity, ENT_QUOTES);
 
-    // [form validation goes here]
-
+    $isFormValid = true;
+    if($title == ""){ $isFormValid = false;}
+    if($author == ""){ $isFormValid = false;}
+    if($quantity == ""){ $quantity = 1;}
+    
     $sql = "
         INSERT INTO books (title, author, year, volume, edition, series, collection, collection_number, isbn, isVisible) 
         VALUES ('{$title}', '{$author}', '{$year}', '{$volume}', '{$edition}', '{$series}', '{$collection}', '{$collectionNumber}', '{$isbn}', {$isVisible});
@@ -36,8 +39,10 @@
     var_dump($sql);
 
     $query = false;
-    for($i = 0; $i < $quantity; $i++){  // very fucked up
-        $query = $conn->query($sql);
+    if($isFormValid){
+        for($i = 0; $i < $quantity; $i++){  // very fucked up
+            $query = $conn->query($sql);
+        }
     }
 
     if($query){

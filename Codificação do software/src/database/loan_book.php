@@ -36,10 +36,16 @@
         $bookCanBeLoaned = false;
     }
 
+    if($return_date == ""){
+        echo("Data de retorno inválida.<br>");
+        $bookCanBeLoaned = false;
+    }
+
     if($queryLoanedBook){
         echo("O livro com o ID informado já está emprestado para um usuário.<br>");
         $bookCanBeLoaned = false;
     }
+    
 
     if($bookCanBeLoaned){
         $queryLoan = "        
